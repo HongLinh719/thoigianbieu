@@ -840,6 +840,223 @@
     font-size: 16px;
     z-index: 1000;
 }
+.tree-container {
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+}
+
+#reset-tree {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#reset-tree {
+    display: none;
+}
+#reset-tree {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+.evaluation-section {
+    background: #ffa726;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px 0;
+    color: white;
+}
+
+.evaluation-section h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.eval-category {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.eval-category h4 {
+    margin: 0 0 5px 0;
+}
+
+.subtitle {
+    font-size: 0.9em;
+    margin: 0 0 15px 0;
+    opacity: 0.9;
+}
+
+.score-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.score {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.evaluation-section {
+    background: #f4a460;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.evaluation-section h3 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.eval-category {
+    background: #deb887;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.eval-category h4 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #fff;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.score-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    color: white;
+}
+.competition-section {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.eval-category {
+    margin: 15px 0;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.eval-category h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.score-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.score-row:last-child {
+    border-bottom: none;
+}
+.competition-section {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.eval-category {
+    margin: 15px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.eval-category h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.score-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.score-row span {
+    padding: 5px 15px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    color: #333;
+}
+.competition-section {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.competition-section h2 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.eval-category {
+    margin: 10px 0;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+}
+
+.eval-category h3 {
+    color: #666;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.score-row {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.score-row span {
+    padding: 5px 10px;
+    background: #f0f0f0;
+    border-radius: 5px;
+}
 </style>
 </head>
 <body>
@@ -928,6 +1145,85 @@ if (typeof switchTab !== 'undefined') {
             <div class="xp-bar">
                 <div class="xp-progress" id="thaoVyXP" style="width:0%"></div>
             </div>
+        </div>
+    </div>
+</div>
+
+<div class="competition-section">
+    <h2>Cuộc Thi Tuần</h2>
+    <div class="eval-category">
+        <h3>Ngủ Đúng Giờ</h3>
+        <div class="score-row">
+            <span>Trí Dũng:</span>
+            <span>0 điểm</span>
+        </div>
+        <div class="score-row">
+            <span>Thảo Vy:</span>
+            <span>0 điểm</span>
+        </div>
+    </div>
+    <div class="eval-category">
+        <h3>Học Tập Chăm Chỉ</h3>
+        <div class="score-row">
+            <span>Trí Dũng:</span>
+            <span>0 điểm</span>
+        </div>
+        <div class="score-row">
+            <span>Thảo Vy:</span>
+            <span>0 điểm</span>
+        </div>
+    </div>
+</div>
+
+<div class="competition-section">
+    <h2>Weekly Competition</h2>
+    <div class="eval-category">
+        <h3>Morning Routine</h3>
+        <div class="score-row">
+            <span>Vit: <span id="vitMorningScore">0</span> points</span>
+            <span>Vy: <span id="vyMorningScore">0</span> points</span>
+        </div>
+    </div>
+    
+    <div class="eval-category">
+        <h3>Study & Activities</h3>
+        <div class="score-row">
+            <span>Vit: <span id="vitStudyScore">0</span> points</span>
+            <span>Vy: <span id="vyStudyScore">0</span> points</span>
+        </div>
+    </div>
+    
+    <div class="eval-category">
+        <h3>Evening Routine</h3>
+        <div class="score-row">
+            <span>Vit: <span id="vitEveningScore">0</span> points</span>
+            <span>Vy: <span id="vyEveningScore">0</span> points</span>
+        </div>
+    </div>
+    
+    <div class="eval-category">
+        <h3>Total Weekly Score</h3>
+        <div class="score-row">
+            <span>Vit: <span id="vitTotalScore">0</span> points</span>
+            <span>Vy: <span id="vyTotalScore">0</span> points</span>
+        </div>
+    </div>
+</div>
+
+<div class="competition-section">
+    <h2>Weekly Competition</h2>
+    <div class="eval-category">
+        <h3>Today's Scores</h3>
+        <div class="score-row">
+            <span>Vit: <span id="vit-score">0</span></span>
+            <span>Vy: <span id="vy-score">0</span></span>
+        </div>
+    </div>
+    <div class="eval-category">
+        <h3>Weekly Progress</h3>
+        <div class="score-row">
+            <span>Vit Total: <span id="vit-total">0</span></span>
+            <span>Vy Total: <span id="vy-total">0</span></span>
         </div>
     </div>
 </div>
@@ -1025,25 +1321,15 @@ if (typeof switchTab !== 'undefined') {
         
         // Danh sách nhiệm vụ cố định
         const taskTemplates = {
-            tridung: [
-                { id: 1, time: "21:00", name: "Đi ngủ (đêm qua)", isPreviousSleep: true, ratings: ["Đúng giờ", "Trễ giờ", "Không ngủ"] },
-                { id: 2, time: "6:30 - 7:00", name: "Thức dậy, vệ sinh cá nhân, đi học", ratings: ["Tốt", "Chưa được tốt", "Chưa tốt"] },
-                { id: 3, time: "17:00 - 18:00", name: "Chơi tự do", ratings: ["Tốt", "Chưa được tốt", "Chưa tốt"] },
-                { id: 4, time: "18:00 - 18:30", name: "Ăn tối tại nhà", ratings: ["Ăn nhanh và nhiều", "Ăn chậm", "Không chịu ăn"] },
-                { id: 5, time: "18:30 - 19:00", name: "Vệ sinh cá nhân buổi tối", ratings: ["Tốt", "Chưa được tốt", "Chưa tốt"] },
-                { id: 6, time: "19:00 - 20:00", name: "Đọc sách, tô màu hoặc làm toán", ratings: ["Tốt", "Chưa được tốt", "Chưa tốt"] },
-                { id: 7, time: "21:00", name: "Đi ngủ", ratings: ["Đúng giờ", "Trễ giờ", "Không ngủ"] }
-            ],
-            thaoVy: [
-                { id: 1, time: "21:00", name: "Đi ngủ (đêm qua)", isPreviousSleep: true, ratings: ["Đúng giờ", "Trễ giờ", "Không ngủ"] },
-                { id: 2, time: "6:30 - 7:00", name: "Thức dậy, vệ sinh cá nhân, đi học", ratings: ["Tốt", "Chưa được tốt", "Chưa tốt"] },
-                { id: 3, time: "17:00 - 18:00", name: "Chơi tự do", ratings: ["Tốt", "Chưa được tốt", "Chưa tốt"] },
-                { id: 4, time: "18:00 - 18:30", name: "Ăn tối tại nhà", ratings: ["Ăn nhanh và nhiều", "Ăn chậm", "Không chịu ăn"] },
-                { id: 5, time: "18:30 - 19:00", name: "Vệ sinh cá nhân buổi tối", ratings: ["Tốt", "Chưa được tốt", "Chưa tốt"] },
-                { id: 6, time: "19:00 - 20:00", name: "Đọc sách, tô màu", ratings: ["Tốt", "Chưa được tốt", "Chưa tốt"] },
-                { id: 7, time: "21:00", name: "Đi ngủ", ratings: ["Đúng giờ", "Trễ giờ", "Không ngủ"] }
-            ]
-        };
+    tridung: [
+        { id: 1, time: "21:00", name: "Ngủ đúng giờ", isPreviousSleep: true, ratings: ["Đúng giờ", "Trễ giờ", "Không ngủ"] },
+        { id: 2, time: "6:30 - 7:00", name: "Học tập chăm chỉ", ratings: ["Tốt", "Chưa được tốt", "Chưa tốt"] },
+    ],
+    thaoVy: [
+        { id: 1, time: "21:00", name: "Ngủ đúng giờ", isPreviousSleep: true, ratings: ["Đúng giờ", "Trễ giờ", "Không ngủ"] },
+        { id: 2, time: "6:30 - 7:00", name: "Học tập chăm chỉ", ratings: ["Tốt", "Chưa được tốt", "Chưa tốt"] },
+    ]
+};
         
         // Hiển thị ngày hiện tại
         function updateDateDisplay() {
@@ -1186,20 +1472,20 @@ if (typeof switchTab !== 'undefined') {
             
             taskElement.innerHTML = `
                 <div class="task-header">
-                    <div class="task-time">${task.time}</div>
-                    <div class="task-name">${task.name}</div>
+                    <div class="task-time">${template.time}</div>
+                    <div class="task-name">${template.name}</div>
                 </div>
                 <div class="rating-buttons">
                     <button class="rating-btn good-btn ${task.rating === 'good' ? 'active' : ''}" 
-                            onclick="rateTask('${childName}', ${task.id}, 'good')">
+                            onclick="rateTask('${childName}', '${task.id}', 'good')">
                         <i class="fas fa-smile"></i> ${template.ratings[0]}
                     </button>
                     <button class="rating-btn neutral-btn ${task.rating === 'neutral' ? 'active' : ''}" 
-                            onclick="rateTask('${childName}', ${task.id}, 'neutral')">
+                            onclick="rateTask('${childName}', '${task.id}', 'neutral')">
                         <i class="fas fa-meh"></i> ${template.ratings[1]}
                     </button>
                     <button class="rating-btn bad-btn ${task.rating === 'bad' ? 'active' : ''}" 
-                            onclick="rateTask('${childName}', ${task.id}, 'bad')">
+                            onclick="rateTask('${childName}', '${task.id}', 'bad')">
                         <i class="fas fa-frown"></i> ${template.ratings[2]}
                     </button>
                 </div>
@@ -1210,7 +1496,6 @@ if (typeof switchTab !== 'undefined') {
             
             return taskElement;
         }
-        
         
         // Tính lại tổng điểm
         function recalculateTotalPoints(childName, dateKey) {
@@ -1503,30 +1788,74 @@ function loadData() {
         scheduleData = JSON.parse(savedData);
     }
     
-    // Tải dữ liệu cây
+    // Tải dữ liệu cây và các dữ liệu khác
     const treeData = localStorage.getItem('treeData');
     if (treeData) {
         const parsedTreeData = JSON.parse(treeData);
         waterCredits = parsedTreeData.waterCredits || 0;
         treeLevel = parsedTreeData.treeLevel || 1;
-        
-        // Cập nhật UI
         document.getElementById("water-units").textContent = waterCredits;
         updateTreeImage();
-        
-        console.log("Đã tải dữ liệu: lượt tưới =", waterCredits, "cấp độ cây =", treeLevel);
     }
-    
-    // Lấy ngày trong tuần hiện tại
-    currentWeekDay = new Date().getDay(); // 0: Chủ Nhật, 1: Thứ 2...
     
     // Khởi tạo ngày hiện tại nếu chưa có
     initializeCurrentDate();
-    checkAndResetTree();
+    // Cập nhật giao diện
     updateDateDisplay();
     updateSleepRecord();
     renderTasks();
     checkReward();
+    // Tải dữ liệu thử thách
+    if (localStorage.getItem('challenges')) {
+        Object.assign(challenges, JSON.parse(localStorage.getItem('challenges')));
+    }
+    displaySchedule();
+    displayChallenges();
+}
+
+// Khởi tạo dữ liệu cho ngày hiện tại nếu chưa có
+function initializeCurrentDate() {
+    const dateKey = getDateKey();
+    
+    ['tridung', 'thaoVy'].forEach(child => {
+        if (!scheduleData[child][dateKey]) {
+            scheduleData[child][dateKey] = {
+                tasks: [],
+                totalPoints: 0
+            };
+            
+            // Tạo các nhiệm vụ từ template và giữ lại đánh giá từ ngày trước nếu có
+            scheduleData[child][dateKey].tasks = taskTemplates[child].map(template => {
+                const task = {
+                    id: template.id,
+                    time: template.time,
+                    name: template.name,
+                    isPreviousSleep: template.isPreviousSleep || false,
+                    rating: null
+                };
+                
+                // Kiểm tra đánh giá từ ngày trước
+                const prevDate = new Date(currentDate);
+                prevDate.setDate(prevDate.getDate() - 1);
+                const prevDateKey = getDateKey(prevDate);
+                
+                if (scheduleData[child][prevDateKey] && scheduleData[child][prevDateKey].tasks) {
+                    const prevTask = scheduleData[child][prevDateKey].tasks.find(t => t.id === template.id);
+                    if (prevTask && prevTask.rating) {
+                        task.rating = prevTask.rating;
+                    }
+                }
+                
+                return task;
+            });
+            
+            // Tính lại tổng điểm sau khi khôi phục đánh giá
+            recalculateTotalPoints(child, dateKey);
+            
+            // Lưu dữ liệu ngay sau khi khởi tạo
+            saveData();
+        }
+    });
 }
         
         // Khởi tạo dữ liệu cho ngày hiện tại nếu chưa có
@@ -1562,6 +1891,59 @@ function loadData() {
         
         // Khởi chạy ứng dụng
         document.addEventListener('DOMContentLoaded', loadData);
+
+// Hàm tính điểm cho cuộc thi tuần
+function calculateWeeklyScores() {
+    const scores = {
+        tridung: { sleep: 0, study: 0 },
+        thaoVy: { sleep: 0, study: 0 }
+    };
+    
+    // Lấy 7 ngày gần nhất
+    for (let i = 0; i < 7; i++) {
+        const date = new Date();
+        date.setDate(date.getDate() - i);
+        const dateKey = getDateKey(date);
+        
+        // Tính điểm cho cả hai bé
+        ['tridung', 'thaoVy'].forEach(child => {
+            if (scheduleData[child][dateKey]?.tasks) {
+                // Kiểm tra nhiệm vụ ngủ
+                const sleepTask = scheduleData[child][dateKey].tasks.find(t => t.id === 1);
+                if (sleepTask?.rating === 'good') scores[child].sleep++;
+                
+                // Kiểm tra nhiệm vụ học tập
+                const studyTask = scheduleData[child][dateKey].tasks.find(t => t.id === 2);
+                if (studyTask?.rating === 'good') scores[child].study++;
+            }
+        });
+    }
+    
+    // Cập nhật hiển thị
+    updateScoreDisplay('tridung', scores.tridung);
+    updateScoreDisplay('thaoVy', scores.thaoVy);
+}
+
+// Hàm cập nhật hiển thị điểm
+function updateScoreDisplay(child, scores) {
+    const displayName = child === 'tridung' ? 'Trí Dũng' : 'Thảo Vy';
+    
+    // Cập nhật điểm ngủ
+    document.querySelector(`.eval-category:first-child .score-row:has(span:contains('${displayName}')) span:last-child`).textContent = `${scores.sleep} điểm`;
+    
+    // Cập nhật điểm học tập
+    document.querySelector(`.eval-category:last-child .score-row:has(span:contains('${displayName}')) span:last-child`).textContent = `${scores.study} điểm`;
+}
+
+// Cập nhật điểm mỗi khi đánh giá nhiệm vụ
+const originalRateTask = rateTask;
+rateTask = function(childName, taskId, rating) {
+    originalRateTask(childName, taskId, rating);
+    calculateWeeklyScores();
+};
+
+// Tính điểm ban đầu khi tải trang
+document.addEventListener('DOMContentLoaded', calculateWeeklyScores);
     </script>
 <div id="popup-congrats" style="display:none; position:fixed; top:30%; left:50%; transform:translate(-50%, -50%); z-index:9999; text-align:center;">
 <img alt="Mẹ Quỳnh" src="images/me_quynh.jpg" style="width:250px; border-radius:10px; box-shadow: 0 0 10px #888;"/>
@@ -1587,9 +1969,15 @@ function loadData() {
     <button class="water-button" onclick="waterTree()" title="Tưới nước cho cây">
         💧
     </button>
+    <button id="reset-tree" class="admin-btn" onclick="resetTree()" 
+            style="position: absolute; right: -60px; bottom: 0; background: #FF5722; color: white; 
+            border: none; padding: 10px; border-radius: 5px; cursor: pointer; display: none;">
+        <i class="fas fa-undo"></i> Reset
+    </button>
 </div>
 
 // Thêm nút reset vào tree container
+
 document.querySelector('.tree-container').innerHTML += `
     <button id="reset-tree" class="admin-btn" onclick="resetTree()" 
             style="position: absolute; right: -60px; bottom: 0; background: #FF5722; color: white; 
@@ -1598,33 +1986,8 @@ document.querySelector('.tree-container').innerHTML += `
     </button>
 `;
 
-// Thêm hàm reset cây
-function resetTree() {
-    const pin = prompt("Nhập mã PIN để xác nhận reset cây (****)");
-    if (pin !== "2022") {
-        alert("Mã PIN không đúng!");
-        return;
-    }
 
-    if (confirm("Bạn có chắc chắn muốn reset cây về trạng thái ban đầu?")) {
-        treeLevel = 1;
-        waterCredits = 0;
-        document.getElementById("tree-img").src = "images/tree_day1.png";
-        document.getElementById("tree-status").textContent = "Cây đã được reset về trạng thái ban đầu!";
-        document.getElementById("water-units").textContent = "0";
-        saveData();
-        alert("Đã reset cây thành công!");
-    }
-}
 
-// Thêm phím tắt để hiện/ẩn nút reset (Ctrl + Shift + R)
-document.addEventListener('keydown', function(e) {
-    if (e.ctrlKey && e.shiftKey && e.key === 'R') {
-        e.preventDefault();
-        const resetBtn = document.getElementById('reset-tree');
-        resetBtn.style.display = resetBtn.style.display === 'none' ? 'block' : 'none';
-    }
-});
 
 // Thêm khu vực hiển thị huy hiệu
 <div style="position: fixed; top: 100px; right: 20px; text-align: center; background-color: rgba(255,255,255,0.8); padding: 10px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
@@ -1824,49 +2187,6 @@ function showLevelUpNotification(oldLevel, newLevel) {
         <div style="font-weight: bold; margin-bottom: 10px;">CHÚC MỪNG BÉ!</div>
         <div>Bé đã lên cấp!</div>
         <div style="display: flex; align-items: center; justify-content: center; margin: 20px 0;">
-            <div style="font-size: 24px; margin-right: 20px;">Cấp ${oldLevel}</div>
-            <div style="font-size: 24px;">➡️</div>
-            <div style="font-size: 36px; font-weight: bold; margin-left: 20px;">Cấp ${newLevel}</div>
-        </div>
-        <div>Hãy tiếp tục cố gắng nhé!</div>
-        <button style="margin-top: 20px; padding: 10px 20px; background: white; color: #4CAF50; border: none; border-radius: 30px; font-weight: bold; cursor: pointer;">Cảm ơn</button>
-    `;
-    
-    // Thêm vào body
-    document.body.appendChild(notification);
-    
-    // Xử lý sự kiện nút đóng
-    notification.querySelector('button').addEventListener('click', () => {
-        document.body.removeChild(notification);
-    });
-    
-    // Phát âm thanh chúc mừng
-    const audio = new Audio('https://assets.mixkit.co/active_storage/sfx/220/220-preview.mp3');
-    audio.play().catch(e => console.warn("Không thể phát âm thanh:", e));
-    
-    // Hiệu ứng pháo hoa
-    createFireworks();
-}
-
-// Cập nhật hiển thị cấp độ
-function updateLevelDisplay() {
-    // Kiểm tra nếu phần tử hiển thị cấp độ chưa tồn tại, tạo mới
-    if (!document.getElementById('child-level-display')) {
-        const levelDisplay = document.createElement('div');
-        levelDisplay.id = 'child-level-display';
-        levelDisplay.style.position = 'fixed';
-        levelDisplay.style.top = '70px';
-        levelDisplay.style.left = '20px';
-        levelDisplay.style.background = 'linear-gradient(45deg, #673AB7, #3F51B5)';
-        levelDisplay.style.color = 'white';
-        levelDisplay.style.padding = '5px 15px';
-        levelDisplay.style.borderRadius = '20px';
-        levelDisplay.style.fontWeight = 'bold';
-        levelDisplay.style.zIndex = '999';
-        document.body.appendChild(levelDisplay);
-    }
-    
-    // Cập nhật nội dung
     const levelDisplay = document.getElementById('child-level-display');
     levelDisplay.innerHTML = `${currentChild === 'tridung' ? 'Trí Dũng' : 'Thảo Vy'} - Cấp ${childLevel[currentChild]}`;
 }
@@ -1961,810 +2281,177 @@ loadData = function() {
 
 // Cập nhật hàm rateTask
 function rateTask(childName, taskId, rating) {
-    const now = new Date();
-    const today = getDateKey(now);
-    const currentHour = now.getHours();
-    const currentMinute = now.getMinutes();
-
-    const displayedDate = getDateKey(currentDate);
-
-    if (new Date(displayedDate) > new Date(today)) {
-        alert("Không thể đánh giá nhiệm vụ của ngày trong tương lai!");
-        return;
+    const dateKey = getDateKey();
+    if (!scheduleData[childName][dateKey]) {
+        scheduleData[childName][dateKey] = {
+            tasks: [],
+            totalPoints: 0
+        };
     }
 
-    // Kiểm tra mật khẩu
-    const pin = prompt("Nhập mã PIN để xác nhận (****)");
-    if (pin !== "2022") {
-        alert("Mã PIN không đúng!");
-        return;
+    // Tìm task trong danh sách
+    let taskIndex = scheduleData[childName][dateKey].tasks.findIndex(t => t.id === taskId);
+    if (taskIndex === -1) {
+        // Nếu chưa có task, thêm mới
+        scheduleData[childName][dateKey].tasks.push({
+            id: taskId,
+            rating: rating
+        });
+    } else {
+        // Nếu đã có task, cập nhật rating
+        scheduleData[childName][dateKey].tasks[taskIndex].rating = rating;
     }
 
-    const dateKey = getDateKey(currentDate);
-    const task = scheduleData[childName][dateKey]?.tasks.find(t => t.id === taskId);
-    if (!task) return;
-
-    // Xử lý âm thanh cho đánh giá không tốt
-    if (rating === 'bad') {
-        const audio = new Audio('./audio/chua_tot.mp3');
-        audio.play().catch(e => console.warn("Không thể phát âm thanh:", e));
-    } else if (rating === 'neutral') {
-        const audio = new Audio('./audio/ban_co_gang_vao_lan_sau_nhe.mp3');
-        audio.play().catch(e => console.warn("Không thể phát âm thanh:", e));
-    }
-
-    task.rating = rating;
+    // Tính lại điểm
     recalculateTotalPoints(childName, dateKey);
-
-    // Xử lý khi đánh giá tốt
-    if (rating === 'good') {
-        const taskTemplate = taskTemplates[childName].find(t => t.id === taskId);
-        if (taskTemplate) {
-            createFireworks();
-            
-            // Đợi 4 giây sau khi pháo hoa kết thúc mới phát âm thanh mẹ Quỳnh
-            setTimeout(() => {
-                playCongrats(taskTemplate.name.toLowerCase(), childName);
-                showAISuggestion(childName, 'goodTask');
-                addWater(1);
-            }, 4000);
-        }
-    }
-
-    renderTasks();
+    
+    // Lưu dữ liệu và cập nhật giao diện
+    saveData();
+    displaySchedule();
     updateProgress();
-    checkReward();
-    checkAndUpgradeLevel();
-    checkAndAwardBadges();
-    saveData();
-}
 
-function createFireworks() {
-    const fireworksContainer = document.createElement('div');
-    fireworksContainer.style.position = 'fixed';
-    fireworksContainer.style.top = '0';
-    fireworksContainer.style.left = '0';
-    fireworksContainer.style.width = '100%';
-    fireworksContainer.style.height = '100%';
-    fireworksContainer.style.pointerEvents = 'none';
-    fireworksContainer.style.zIndex = '999';
-    document.body.appendChild(fireworksContainer);
-
-    // Tạo âm thanh pháo hoa
-    const audio = document.getElementById("audio-congrats");
-    audio.src = "audio/firework.mp3";
-    audio.play().catch(e => console.warn("Không thể phát âm thanh:", e));
-
-    // Tăng số lượng pháo hoa và thời gian hiển thị
-    const totalFireworks = 15; // Tăng từ 5 lên 15
-    const duration = 8000; // Tăng từ 6000 lên 8000ms
-
-    // Tạo pháo hoa với tần suất cao hơn
-    for (let i = 0; i < totalFireworks; i++) {
-        setTimeout(() => {
-            createLargeFirework(fireworksContainer);
-        }, i * 400); // Giảm khoảng cách giữa các quả pháo từ 800 xuống 400ms
-    }
-
-    setTimeout(() => {
-        document.body.removeChild(fireworksContainer);
-    }, duration);
-}
-
-function createLargeFirework(container) {
-    const startX = window.innerWidth / 2;
-    const startY = window.innerHeight;
-
-    // Tăng phạm vi nổ
-    const explodeX = startX + (Math.random() * 400 - 200); // Tăng từ 200 lên 400
-    const explodeY = window.innerHeight * (0.2 + Math.random() * 0.4); // Nổ từ 20% đến 60% chiều cao màn hình
-
-    const firework = document.createElement('div');
-    firework.style.position = 'absolute';
-    firework.style.width = '20px'; // Tăng kích thước từ 15px lên 20px
-    firework.style.height = '20px';
-    firework.style.borderRadius = '50%';
-    firework.style.backgroundColor = getRandomColor();
-    firework.style.boxShadow = `0 0 15px ${getRandomColor()}`; // Tăng độ sáng
-    firework.style.left = `${startX}px`;
-    firework.style.top = `${startY}px`;
-    firework.style.transition = `transform 1s ease-out, opacity 1s ease-out`;
-    container.appendChild(firework);
-
-    setTimeout(() => {
-        firework.style.transform = `translate(${explodeX - startX}px, ${explodeY - startY}px)`;
-
-        setTimeout(() => {
-            firework.style.opacity = '0';
-
-            // Tăng số lượng tia và kích thước
-            const numParticles = 120; // Tăng từ 80 lên 120
-            for (let i = 0; i < numParticles; i++) {
-                const angle = (i / numParticles) * 2 * Math.PI;
-                const distance = 200 + Math.random() * 200; // Tăng khoảng cách bắn
-                const duration = 2.5 + Math.random() * 1.5; // Tăng thời gian bay
-
-                const particle = document.createElement('div');
-                particle.style.position = 'absolute';
-                particle.style.width = '10px'; // Tăng kích thước tia
-                particle.style.height = '10px';
-                particle.style.backgroundColor = getRandomColor();
-                particle.style.boxShadow = `0 0 8px ${getRandomColor()}`; // Tăng độ sáng
-                particle.style.opacity = '1';
-                particle.style.borderRadius = '50%';
-                particle.style.left = `${explodeX}px`;
-                particle.style.top = `${explodeY}px`;
-                particle.style.transition = `transform ${duration}s ease-out, opacity ${duration}s ease-out`;
-                container.appendChild(particle);
-
-                setTimeout(() => {
-                    particle.style.transform = `translate(${Math.cos(angle) * distance}px, ${Math.sin(angle) * distance}px)`;
-                    particle.style.opacity = '0';
-                }, 10);
-
-                setTimeout(() => {
-                    if (document.body.contains(particle)) {
-                        container.removeChild(particle);
-                    }
-                }, duration * 1000);
-            }
-        }, 1000);
-    }, 10);
-}
-function getRandomColor() {
-    const colors = [
-        '#ff0000', '#ffa500', '#ffff00', '#00ff00', '#00ffff', 
-        '#0000ff', '#ff00ff', '#ff69b4', '#00ff7f', '#ff4500'
-    ];
-    return colors[Math.floor(Math.random() * colors.length)];
-}
-
-function checkAndResetTree() {
-    const today = new Date();
-    const dayOfWeek = today.getDay(); // 0 = Chủ nhật, 1 = Thứ 2, ...
-
-    // Kiểm tra xem có phải là thứ 2 không
-    if (dayOfWeek === 1) {
-        // Lấy ngày cuối cùng reset cây từ localStorage
-        const lastResetDate = localStorage.getItem('lastTreeReset');
-        const today = new Date().toDateString();
-
-        // Nếu chưa reset hôm nay
-        if (lastResetDate !== today) {
-            // Reset cây về cấp 1
-            treeLevel = 1;
-            document.getElementById("tree-img").src = "images/tree_day1.png";
-            document.getElementById("tree-status").textContent = "Cây đã reset! Hãy chăm sóc cây từ đầu nhé!";
-            document.getElementById("tree-status").style.color = "#FF9800";
-
-            // Lưu ngày đã reset
-            localStorage.setItem('lastTreeReset', today);
-            
-            // Lưu trạng thái cây
-            saveData();
-            
-            // Thông báo cho người dùng
-            alert("Đã sang tuần mới! Cây đã được reset về cấp 1.");
-        }
-    }
-}
-function createSingleFirework(container) {
-    // Vị trí xuất phát
-    const startX = Math.random() * window.innerWidth;
-    const startY = window.innerHeight;
-
-    // Vị trí nổ
-    const explodeX = startX + (Math.random() * 200 - 100);
-    const explodeY = 100 + Math.random() * (window.innerHeight / 2);
-
-    // Tạo pháo hoa
-    const firework = document.createElement('div');
-    firework.style.position = 'absolute';
-    firework.style.width = '8px';
-    firework.style.height = '8px';
-    firework.style.borderRadius = '50%';
-    firework.style.backgroundColor = getRandomColor();
-    firework.style.left = `${startX}px`;
-    firework.style.top = `${startY}px`;
-    firework.style.transition = `transform 1.5s ease-out, opacity 1.5s ease-out`;
-    container.appendChild(firework);
-
-    // Bay lên và nổ
-    setTimeout(() => {
-        firework.style.transform = `translate(${explodeX - startX}px, ${explodeY - startY}px)`;
-
-        // Nổ thành nhiều tia nhỏ
-        setTimeout(() => {
-            firework.style.opacity = '0';
-
-            // Tạo các tia nhỏ
-            const numParticles = 50;
-            for (let i = 0; i < numParticles; i++) {
-                const angle = (i / numParticles) * 2 * Math.PI;
-                const distance = 100 + Math.random() * 100;
-                const duration = 1.5 + Math.random() * 0.5;
-
-                const particle = document.createElement('div');
-                particle.style.position = 'absolute';
-                particle.style.width = '5px';
-                particle.style.height = '5px';
-                particle.style.backgroundColor = getRandomColor();
-                particle.style.opacity = '1';
-                particle.style.borderRadius = '50%';
-                particle.style.left = `${explodeX}px`;
-                particle.style.top = `${explodeY}px`;
-                particle.style.transition = `transform ${duration}s ease-out, opacity ${duration}s ease-out`;
-                container.appendChild(particle);
-
-                // Bắn tỏa ra
-                setTimeout(() => {
-                    particle.style.transform = `translate(${Math.cos(angle) * distance}px, ${Math.sin(angle) * distance}px)`;
-                    particle.style.opacity = '0';
-                }, 10);
-
-                // Xóa tia sau khi hoàn thành
-                setTimeout(() => {
-                    if (document.body.contains(particle)) {
-                        container.removeChild(particle);
-                    }
-                }, duration * 1000);
-            }
-        }, 1500);
-    }, 10);
-}
-function playCongrats(taskName, childName) {
-    const suffix = childName === 'thaoVy' ? '_thaovy' : '';
-    
-    const messages = {
-        "ăn tối tại nhà": `audio/an_toi_tai_nha${suffix}.mp3`,
-        "vệ sinh cá nhân buổi tối": `audio/ve_sinh_ca_nhan_buoi_toi${suffix}.mp3`,
-        "đọc sách, tô màu hoặc làm toán": `audio/doc_sach_to_mau_hoac_lam_toan${suffix}.mp3`,
-        "đi ngủ": `audio/di_ngu${suffix}.mp3`,
-        "thức dậy, vệ sinh cá nhân, đi học": `audio/thuc_day_ve_sinh_ca_nhan_di_hoc${suffix}.mp3`,
-        "chơi tự do": `audio/choi_tu_do${suffix}.mp3`,
-        "vệ sinh cá nhân sáng": `audio/ve_sinh_ca_nhan_sang.mp3`,
-        "ngủ đêm qua": `audio/ngu_dem_qua.mp3`,
-        "pháo hoa": "audio/firework.mp3"
-    };
-
-    const audio = document.getElementById("audio-congrats");
-    const popup = document.getElementById("popup-congrats");
-    const popupText = document.getElementById("popup-text");
-    
-    // Chọn đúng file âm thanh dựa trên tên nhiệm vụ
-    const audioPath = messages[taskName.toLowerCase()];
-    if (audioPath) {
-        audio.src = audioPath;
-    }
-
-    // Hiển thị thông báo phù hợp với từng bé
-    const childDisplayName = childName === 'thaoVy' ? 'Thảo Vy' : 'anh Vít';
-    popupText.innerText = `Chúc mừng ${childDisplayName} hoàn thành tốt nhiệm vụ: ${taskName}`;
-    popup.style.display = "block";
-
-    // Phát âm thanh
-    if (audio.src) {
-        audio.play().catch(e => console.warn("Không thể phát audio:", e));
-    }
-
-    // Tự động ẩn popup sau 4.5 giây
-    setTimeout(() => {
-        popup.style.display = "none";
-    }, 4500);
-}
-// Cập nhật hình ảnh cây theo ngày trong tuần
-
-
-// Biến theo dõi trạng thái cây và nước
-let waterCredits = 0;       // Số lượt tưới
-let treeLevel = 1;          // Cấp độ cây (1-7)
-let currentWeekDay = 0;     // Ngày trong tuần (0: Chủ Nhật, 1: Thứ 2...)
-let waterReceivedTasks = {};
-// Sửa hàm addWater để tăng số lượt tưới
-// Sửa hàm addWater
-function addWater(units) {
-    // Tăng số lượt tưới
-    waterCredits += units;
-    
-    // Cập nhật UI ngay lập tức
-    document.getElementById("water-units").textContent = waterCredits;
-    
-    // Hiển thị thông báo
-    const waterNotification = document.createElement("div");
-    waterNotification.style.position = "fixed";
-    waterNotification.style.bottom = "10px";
-    waterNotification.style.left = "50%";
-    waterNotification.style.transform = "translateX(-50%)";
-    waterNotification.style.backgroundColor = "#2196F3";
-    waterNotification.style.color = "white";
-    waterNotification.style.padding = "10px 20px";
-    waterNotification.style.borderRadius = "5px";
-    waterNotification.style.zIndex = "9999";
-    waterNotification.innerHTML = `<i class="fas fa-plus"></i> Đã thêm ${units} lượt tưới nước!`;
-    
-    document.body.appendChild(waterNotification);
-    
-    setTimeout(() => {
-        waterNotification.style.opacity = "0";
-        waterNotification.style.transition = "opacity 0.5s";
-        setTimeout(() => {
-            document.body.removeChild(waterNotification);
-        }, 500);
-    }, 2000);
-    
-    // Lưu dữ liệu
-    saveData();
-    
-    console.log("Đã thêm", units, "lượt tưới, hiện có:", waterCredits);
-}
-// Cập nhật hàm rateTask
-/*
-const originalRateTask = rateTask;
-rateTask = function(childName, taskId, rating) {
-    // Gọi hàm gốc
-    originalRateTask(childName, taskId, rating);
-
-    // Nếu đánh giá tốt, tạo hiệu ứng
+    // Kiểm tra và tạo hiệu ứng nếu đánh giá tốt
     if (rating === 'good') {
         const taskTemplate = taskTemplates[childName].find(t => t.id === taskId);
         if (taskTemplate) {
-           playCongrats(taskTemplate.name.toLowerCase());
+            playCongrats(taskTemplate.name.toLowerCase());
             addWater(1);
         }
-        createFireworks(); // Gọi hiệu ứng pháo hoa
+        createFireworks();
     }
 
     // Kiểm tra và nâng cấp
     checkAndUpgradeLevel();
     // Kiểm tra và cấp huy hiệu
     checkAndAwardBadges();
-};
-*/
-// Sửa hàm waterTree() để debug
-function waterTree() {
-    console.log("Đang tưới cây, số lượt hiện tại:", waterCredits);
-    
-    
-    // Cập nhật cấp độ cây
-    treeLevel = Math.min(treeLevel + 1, 7);
-    
-    // Cập nhật hình ảnh cây sau 1.5 giây
-    setTimeout(() => {
-        const treeImg = document.getElementById("tree-img");
-        treeImg.classList.add('tree-growth');
-        setTimeout(() => {
-            treeImg.classList.remove('tree-growth');
-        }, 1000);
-        
-        document.getElementById("tree-img").src = `images/tree_day${treeLevel}.png`;
-        wateringGif.style.display = "none";
-        
-        // Thông báo cho người dùng biết cây đã tăng cấp
-        document.getElementById("tree-status").textContent = "Cây đã phát triển!";
-        document.getElementById("tree-status").style.color = "#4CAF50";
-        
-        // Tạo hiệu ứng
-        createSmallConfetti(treeImg);
-        
-        // Lưu dữ liệu
-        saveData();
-    }, 1500);
+    // Cập nhật tiến độ thử thách
+    updateChallenges(childName, taskId, rating === 'good');
 }
 
-// Thêm audio báo thức
-const alarmAudio = new Audio('https://assets.mixkit.co/active_storage/sfx/2530/2530-preview.mp3');
-const alarmMessages = {
-    '6:30': 'Dậy thôi 2 anh em ơi, dậy vệ sinh cá nhân rồi đi học nào!',
-    '17:00': 'Giờ chơi tự do của 2 anh em rồi nè!',
-    '18:00': 'Đến giờ ăn tối rồi các con!',
-    '18:30': 'Đến giờ vệ sinh cá nhân buổi tối rồi!',
-    '19:00': 'Đến giờ đọc sách và làm bài tập rồi!',
-    '21:00': 'Đến giờ đi ngủ rồi các con!'
+// Thêm cấu trúc dữ liệu cho các thử thách
+const challenges = {
+    'no_leftover': {
+        name: 'Không ăn cơm thừa',
+        duration: 5,
+        taskIds: ['an-sang', 'an-trua', 'an-toi'],
+        progress: {
+            'Vy': 0,
+            'Vít': 0
+        },
+        startDate: null
+    },
+    'sleep_on_time': {
+        name: 'Ngủ đúng giờ',
+        duration: 7,
+        taskIds: ['di-ngu'],
+        progress: {
+            'Vy': 0,
+            'Vít': 0
+        },
+        startDate: null
+    }
 };
 
-// Hàm kiểm tra và phát báo thức
-function checkAlarms() {
-    const now = new Date();
-    const currentHour = now.getHours();
-    const currentMinute = now.getMinutes();
-    const currentTime = `${currentHour}:${currentMinute}`;
-
-    Object.keys(alarmMessages).forEach(alarmTime => {
-        const [hour, minute] = alarmTime.split(':').map(Number);
-        if (currentHour === hour && currentMinute === minute) {
-            // Phát âm thanh báo thức
-            alarmAudio.play().catch(e => console.warn("Không thể phát âm thanh:", e));
-            
-            // Hiển thị thông báo
-            const message = alarmMessages[alarmTime];
-            showNotification(message);
-            
-            // Thêm hiệu ứng rung lắc cho thông báo
-            const notification = document.getElementById('notification');
-            notification.style.animation = 'shake 0.5s infinite';
-            setTimeout(() => {
-                notification.style.animation = '';
-            }, 2000);
+function updateChallenges(childName, taskId, completed) {
+    const today = getDateKey(new Date());
+    
+    // Khởi tạo thử thách nếu chưa có
+    Object.keys(challenges).forEach(challengeId => {
+        const challenge = challenges[challengeId];
+        if (!challenge.startDate && completed && challenge.taskIds.includes(taskId)) {
+            challenge.startDate = today;
+            challenge.progress['Vy'] = 0;
+            challenge.progress['Vít'] = 0;
         }
     });
+
+    // Cập nhật tiến độ thử thách
+    Object.keys(challenges).forEach(challengeId => {
+        const challenge = challenges[challengeId];
+        if (challenge.startDate && challenge.taskIds.includes(taskId)) {
+            const daysPassed = Math.floor((new Date(today) - new Date(challenge.startDate)) / (1000 * 60 * 60 * 24));
+            if (daysPassed < challenge.duration) {
+                if (completed) {
+                    challenge.progress[childName]++;
+                }
+                // Kiểm tra hoàn thành thử thách
+                if (challenge.progress[childName] >= challenge.duration) {
+                    alert(`Chúc mừng ${childName} đã hoàn thành thử thách "${challenge.name}"! 🏆`);
+                }
+            }
+        }
+    });
+    saveData();
+    displayChallenges();
 }
 
-// Thêm CSS cho hiệu ứng rung lắc
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes shake {
-        0%, 100% { transform: translateX(-50%) rotate(0deg); }
-        25% { transform: translateX(-53%) rotate(-5deg); }
-        75% { transform: translateX(-47%) rotate(5deg); }
+function displayChallenges() {
+    const challengesContainer = document.getElementById('challenges-container');
+    if (!challengesContainer) {
+        const container = document.createElement('div');
+        container.id = 'challenges-container';
+        container.style.marginTop = '20px';
+        document.querySelector('.schedule-container').appendChild(container);
+    }
+    
+    let html = '<h3>Thử thách tuần này:</h3>';
+    Object.keys(challenges).forEach(challengeId => {
+        const challenge = challenges[challengeId];
+        html += `
+            <div class="challenge-card" style="margin: 10px; padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
+                <h4>${challenge.name}</h4>
+                <p>Thời gian: ${challenge.duration} ngày</p>
+                <div class="progress">
+                    <p>Vít: ${challenge.progress['Vít']}/${challenge.duration} ngày ${challenge.progress['Vít'] >= challenge.duration ? '🏆' : ''}</p>
+                    <p>Vy: ${challenge.progress['Vy']}/${challenge.duration} ngày ${challenge.progress['Vy'] >= challenge.duration ? '🏆' : ''}</p>
+                </div>
+            </div>
+        `;
+    });
+    document.getElementById('challenges-container').innerHTML = html;
+}
+
+// Add styles for weekly progress
+const styleElement = document.createElement('style');
+styleElement.textContent = `
+    .weekly-progress {
+        margin: 20px;
+        padding: 15px;
+        background: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .child-progress {
+        display: inline-block;
+        margin: 10px;
+        text-align: center;
+        padding: 10px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .progress-tree {
+        width: 100px;
+        height: auto;
+        margin: 10px 0;
     }
 `;
-document.head.appendChild(style);
+document.head.appendChild(styleElement);
 
-// Kiểm tra báo thức mỗi phút
-setInterval(checkAlarms, 60000);
-
-// Thêm biến cho hệ thống XP
-let playerData = {
-    tridung: {
-        xp: 0,
-        level: 1,
-        weeklyScore: 0,
-        challengeProgress: 0
-    },
-    thaoVy: {
-        xp: 0,
-        level: 1,
-        weeklyScore: 0,
-        challengeProgress: 0
-    }
-};
-
-// Hàm cập nhật XP
-function addXP(childName, amount) {
-    playerData[childName].xp += amount;
-    const xpForNextLevel = playerData[childName].level * 100;
-    
-    if (playerData[childName].xp >= xpForNextLevel) {
-        playerData[childName].level++;
-        playerData[childName].xp = 0;
-        showLevelUpAnimation(childName);
-    }
-    
-    updateXPDisplay();
-}
-
-// Hiển thị XP và Level
-function updateXPDisplay() {
-    for (const child in playerData) {
-        const xpPercent = (playerData[child].xp / (playerData[child].level * 100)) * 100;
-        document.getElementById(`${child}XP`).style.width = `${xpPercent}%`;
-        document.getElementById(`${child}Level`).textContent = playerData[child].level;
-        document.getElementById(`${child}Score`).textContent = playerData[child].weeklyScore;
-    }
-}
-
-// Hiệu ứng lên cấp
-function showLevelUpAnimation(childName) {
-    const container = document.createElement('div');
-    container.style.position = 'fixed';
-    container.style.top = '50%';
-    container.style.left = '50%';
-    container.style.transform = 'translate(-50%, -50%)';
-    container.style.background = 'linear-gradient(45deg, #4CAF50, #8BC34A)';
-    container.style.padding = '20px';
-    container.style.borderRadius = '15px';
-    container.style.color = 'white';
-    container.style.textAlign = 'center';
-    container.style.zIndex = '9999';
-    
-    container.innerHTML = `
-        <h2>🎉 Chúc mừng! 🎉</h2>
-        <p>${childName === 'tridung' ? 'Trí Dũng' : 'Thảo Vy'} đã lên cấp ${playerData[childName].level}!</p>
-        <div style="font-size: 48px;">⭐</div>
-    `;
-    
-    document.body.appendChild(container);
-    
-    // Phát âm thanh
-    const audio = new Audio('audio/level_up.mp3');
-    audio.play().catch(e => console.warn("Không thể phát âm thanh:", e));
-    
-    setTimeout(() => {
-        container.style.opacity = '0';
-        container.style.transition = 'opacity 0.5s';
-        setTimeout(() => document.body.removeChild(container), 500);
-    }, 3000);
-}
-
-// Cập nhật thử thách hàng tuần
-function updateWeeklyChallenge() {
-    const challenges = [
-        '7 ngày ngủ đúng giờ liên tiếp',
-        '5 ngày ăn hết cơm',
-        '3 ngày làm việc nhà giúp bố mẹ',
-        '4 ngày học bài không cần nhắc'
-    ];
-    
-    const currentWeek = Math.floor(Date.now() / (7 * 24 * 60 * 60 * 1000));
-    const challengeIndex = currentWeek % challenges.length;
-    
-    document.getElementById('challengeText').textContent = challenges[challengeIndex];
-    document.getElementById('challengeProgress').textContent = 
-        `${Math.max(playerData[currentChild].challengeProgress, 0)}`;
-}
-
-// Cập nhật điểm số hàng tuần
-function updateWeeklyScore(childName, points) {
-    playerData[childName].weeklyScore += points;
-    playerData[childName].challengeProgress += (points >= 15 ? 1 : 0);
-    updateXPDisplay();
-    updateWeeklyChallenge();
-}
-
-// Sửa hàm rateTask để thêm XP và điểm số
-const originalRateTask = rateTask;
-rateTask = function(childName, taskId, rating) {
-    originalRateTask(childName, taskId, rating);
-    
-    if (rating === 'good') {
-        addXP(childName, 20);
-        updateWeeklyScore(childName, 3);
-    } else if (rating === 'neutral') {
-        addXP(childName, 10);
-        updateWeeklyScore(childName, 1);
-    }
-};
-
-// Khởi tạo khi trang tải
-document.addEventListener('DOMContentLoaded', function() {
+// Thêm vào hàm loadData
+function loadData() {
     // ...existing code...
-    updateXPDisplay();
-    updateWeeklyChallenge();
-});
-
-// Thêm hệ thống AI vào trước thẻ </body>
-
-// Định nghĩa câu động viên cho từng bé
-const aiResponses = {
-    tridung: {
-        morning: [
-            "Chào buổi sáng anh Vít! 🌞 Hôm nay mình sẽ có một ngày tuyệt vời!",
-            "Dậy sớm thế này là ngoan lắm! Anh Vít đúng là gương mẫu cho em Vy rồi! 🌟",
-            "Chúc anh Vít một ngày mới nhiều năng lượng và niềm vui! 🎈"
-        ],
-        goodTask: [
-            "Giỏi quá! Anh Vít thật là xuất sắc! 🏆",
-            "Mẹ rất tự hào về anh Vít! Con làm tốt lắm! ❤️",
-            "Tuyệt vời! Anh Vít đang tiến bộ mỗi ngày! 🌟",
-            "Wow! Anh Vít làm việc này chuẩn như một người anh trai mẫu mực! 👏"
-        ],
-        needImprovement: [
-            "Không sao đâu anh Vít, lần sau mình cố gắng hơn nhé! 💪",
-            "Mẹ tin anh Vít có thể làm tốt hơn! Cố lên con! 🌈",
-            "Anh Vít đã cố gắng rồi, lần sau chắc chắn sẽ làm tốt hơn! 🎯"
-        ],
-        goodSleep: [
-            "Anh Vít ngủ sớm như thế này sẽ cao lớn và thông minh hơn đấy! 😴",
-            "Ngủ đủ giấc giúp anh Vít có nhiều năng lượng cho ngày mới! 🌙"
-        ],
-        motivation: [
-            "Anh Vít ơi, hãy là tấm gương tốt cho em Vy nha! 🌟",
-            "Mỗi việc tốt anh làm là một bước tiến đến thành công! 🎯",
-            "Anh Vít thật tuyệt vời, cứ tiếp tục phát huy nhé! 🌈"
-        ]
-    },
-    thaoVy: {
-        morning: [
-            "Chào buổi sáng Thảo Vy bé yêu! 🌞 Ngày mới vui vẻ nha!",
-            "Dậy sớm ghê! Thảo Vy của mẹ ngoan quá! 🌟",
-            "Chào bé Vy đáng yêu! Hôm nay mình cùng cố gắng nha! 🎈"
-        ],
-        goodTask: [
-            "Giỏi quá! Thảo Vy của mẹ thật là ngoan! 🏆",
-            "Mẹ rất tự hào về Thảo Vy! Con gái mẹ giỏi lắm! ❤️",
-            "Tuyệt vời! Thảo Vy đang lớn lên mỗi ngày! 🌟",
-            "Bé Vy làm việc này chuẩn như một công chúa nhỏ! 👸"
-        ],
-        needImprovement: [
-            "Không sao đâu Thảo Vy, lần sau mình cố gắng hơn nha! 💪",
-            "Mẹ tin Thảo Vy có thể làm tốt hơn! Cố lên con gái! 🌈",
-            "Thảo Vy đã cố gắng rồi, lần sau chắc chắn sẽ làm tốt hơn! 🎯"
-        ],
-        goodSleep: [
-            "Thảo Vy ngủ sớm như thế này sẽ xinh đẹp và khỏe mạnh hơn đấy! 😴",
-            "Ngủ đủ giấc giúp Thảo Vy có nhiều năng lượng vui chơi! 🌙"
-        ],
-        motivation: [
-            "Thảo Vy là cô bé ngoan của mẹ! Cố gắng lên nha! 🌟",
-            "Mỗi việc tốt Thảo Vy làm là một nụ hoa xinh đẹp! 🌸",
-            "Thảo Vy thật tuyệt vời, cứ tiếp tục phát huy nhé! 🌈"
-        ]
+    if (localStorage.getItem('challenges')) {
+        Object.assign(challenges, JSON.parse(localStorage.getItem('challenges')));
     }
-};
-
-// Cập nhật hàm phân tích hành vi
-function analyzeAndSuggest(childName) {
-    const patterns = behaviorPatterns[childName];
-    const dateKey = getDateKey();
-    const today = new Date();
-    const hour = today.getHours();
-    const dayOfWeek = today.getDay();
-
-    // Phân tích thời gian trong ngày
-    if (hour < 7) {
-        showAISuggestion(childName, 'morning');
-    } else if (hour >= 21) {
-        showAISuggestion(childName, 'goodSleep');
-    }
-
-    // Phân tích xu hướng hoàn thành nhiệm vụ
-    if (patterns.taskCompletionRate) {
-        const recentTasks = Object.entries(patterns.taskCompletionRate)
-            .filter(([taskName, stats]) => stats.total >= 3);
-
-        const goodTasks = recentTasks.filter(([_, stats]) => 
-            (stats.good / stats.total) >= 0.7);
-
-        if (goodTasks.length > 0) {
-            const randomGoodTask = goodTasks[Math.floor(Math.random() * goodTasks.length)];
-            showAIMotivation(childName, randomGoodTask[0]);
-        }
-    }
-
-    // Kiểm tra và gửi lời động viên định kỳ
-    if (dayOfWeek === 1 || dayOfWeek === 5) { // Thứ 2 và thứ 6
-        showAISuggestion(childName, 'motivation');
-    }
-
-    // Phân tích tiến bộ
-    if (scheduleData[childName][dateKey]) {
-        const todayPoints = scheduleData[childName][dateKey].totalPoints || 0;
-        const prevDay = new Date(today);
-        prevDay.setDate(prevDay.getDate() - 1);
-        const prevDateKey = getDateKey(prevDay);
-        
-        if (scheduleData[childName][prevDateKey]) {
-            const yesterdayPoints = scheduleData[childName][prevDateKey].totalPoints || 0;
-            if (todayPoints > yesterdayPoints) {
-                showAIProgressReport(childName, true);
-            }
-        }
-    }
+    displaySchedule();
+    displayChallenges();
 }
 
-// Thêm hàm hiển thị lời động viên đặc biệt
-function showAIMotivation(childName, taskName) {
-    const motivationMessage = aiResponses[childName].motivation[
-        Math.floor(Math.random() * aiResponses[childName].motivation.length)
-    ];
-
-    const aiMessage = document.createElement('div');
-    aiMessage.className = 'ai-message special-motivation';
-    aiMessage.innerHTML = `
-        <div class="ai-avatar">
-            <img src="images/me_quynh.jpg" alt="AI Assistant">
-        </div>
-        <div class="ai-text">${motivationMessage}</div>
-    `;
-
-    // Thêm hiệu ứng đặc biệt
-    aiMessage.style.animation = 'motivationPulse 2s infinite';
-
-    // Thêm style cho hiệu ứng mới
-    if (!document.querySelector('#motivationStyle')) {
-        const style = document.createElement('style');
-        style.id = 'motivationStyle';
-        style.textContent = `
-            @keyframes motivationPulse {
-                0% { transform: scale(1); }
-                50% { transform: scale(1.05); }
-                100% { transform: scale(1); }
-            }
-            
-            .special-motivation {
-                background: linear-gradient(45deg, #FFD700, #FFA500);
-                border: 2px solid #FFD700;
-            }
-            
-            .special-motivation .ai-text {
-                color: white;
-                text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-                background: rgba(255,255,255,0.2);
-            }
-        `;
-        document.head.appendChild(style);
-    }
-
-    const container = document.querySelector('.container');
-    container.insertBefore(aiMessage, container.firstChild);
-
-    // Thêm âm thanh động viên
-    const audio = new Audio('audio/congratulation.mp3');
-    audio.volume = 0.5;
-    audio.play().catch(e => console.warn("Không thể phát âm thanh:", e));
-
-    // Xóa tin nhắn sau 8 giây
-    setTimeout(() => {
-        aiMessage.style.opacity = '0';
-        setTimeout(() => {
-            if (aiMessage.parentNode) {
-                aiMessage.parentNode.removeChild(aiMessage);
-            }
-        }, 500);
-    }, 8000);
-}
-
-// Cập nhật hàm rateTask để tích hợp AI thông minh hơn
-rateTask = function(childName, taskId, rating) {
-    const now = new Date();
-    const today = getDateKey(now);
-    const currentHour = now.getHours();
-    const currentMinute = now.getMinutes();
-
-    const displayedDate = getDateKey(currentDate);
-
-    if (new Date(displayedDate) > new Date(today)) {
-        alert("Không thể đánh giá nhiệm vụ của ngày trong tương lai!");
-        return;
-    }
-
-    // Kiểm tra mật khẩu
-    const pin = prompt("Nhập mã PIN để xác nhận (****)");
-    if (pin !== "2022") {
-        alert("Mã PIN không đúng!");
-        return;
-    }
-
-    const dateKey = getDateKey(currentDate);
-    const task = scheduleData[childName][dateKey]?.tasks.find(t => t.id === taskId);
-    if (!task) return;
-
-    // Cập nhật đánh giá
-    task.rating = rating;
-    recalculateTotalPoints(childName, dateKey);
-
-    // Phân tích và phản hồi thông minh
-    if (rating === 'good') {
-        // Tạo hiệu ứng pháo hoa
-        createFireworks();
-
-        
-        // Phát âm thanh và hiển thị lời khen
-        const taskTemplate = taskTemplates[childName].find(t => t.id === taskId);
-        if (taskTemplate) {
-            setTimeout(() => {
-                playCongrats(taskTemplate.name.toLowerCase(), childName);
-                showAISuggestion(childName, 'goodTask');
-                addWater(1);
-            }, 4000);
-        }
-
-        // Thêm XP và cập nhật tiến trình
-        addXP(childName, 20);
-        updateWeeklyScore(childName, 3);
-    } else if (rating === 'neutral') {
-        showAISuggestion(childName, 'needImprovement');
-        addXP(childName, 10);
-        updateWeeklyScore(childName, 1);
-    } else {
-        // Phát âm thanh động viên
-        const audio = new Audio('./audio/chua_tot.mp3');
-        audio.play().catch(e => console.warn("Không thể phát âm thanh:", e));
-        showAISuggestion(childName, 'needImprovement');
-    }
-
-    // Cập nhật giao diện
-    renderTasks();
-    updateProgress();
-    checkReward();
-    checkAndUpgradeLevel();
-    checkAndAwardBadges();
-    
-    // Lưu dữ liệu
-    saveData();
-    
-    // Phân tích hành vi mới
-    analyzeAndSuggest(childName);
+// Thêm vào hàm saveData
+function saveData() {
+    // ...existing code...
+    localStorage.setItem('challenges', JSON.stringify(challenges));
 }
 
 // Thêm cấu trúc dữ liệu cho event thi đua
@@ -2931,20 +2618,20 @@ function createTaskElement(task, childName) {
     
     taskElement.innerHTML = `
         <div class="task-header">
-            <div class="task-time">${task.time}</div>
-            <div class="task-name">${task.name}</div>
+            <div class="task-time">${template.time}</div>
+            <div class="task-name">${template.name}</div>
         </div>
         <div class="rating-buttons">
             <button class="rating-btn good-btn ${task.rating === 'good' ? 'active' : ''}" 
-                    onclick="rateTask('${childName}', ${task.id}, 'good')">
+                    onclick="rateTask('${childName}', '${task.id}', 'good')">
                 <i class="fas fa-smile"></i> ${template.ratings[0]}
             </button>
             <button class="rating-btn neutral-btn ${task.rating === 'neutral' ? 'active' : ''}" 
-                    onclick="rateTask('${childName}', ${task.id}, 'neutral')">
+                    onclick="rateTask('${childName}', '${task.id}', 'neutral')">
                 <i class="fas fa-meh"></i> ${template.ratings[1]}
             </button>
             <button class="rating-btn bad-btn ${task.rating === 'bad' ? 'active' : ''}" 
-                    onclick="rateTask('${childName}', ${task.id}, 'bad')">
+                    onclick="rateTask('${childName}', '${task.id}', 'bad')">
                 <i class="fas fa-frown"></i> ${template.ratings[2]}
             </button>
         </div>
@@ -2955,6 +2642,266 @@ function createTaskElement(task, childName) {
     
     return taskElement;
 }
+
+// Weekly challenge tracking
+function getWeekNumber(date) {
+    const firstDayOfYear = new Date(date.getFullYear(), 0, 1);
+    const pastDaysOfYear = (date - firstDayOfYear) / 86400000;
+    return Math.ceil((pastDaysOfYear + firstDayOfYear.getDay() + 1) / 7);
+}
+
+function updateWeeklyProgress() {
+    const currentDate = new Date();
+    const weekNumber = getWeekNumber(currentDate);
+    const weekKey = `week_${weekNumber}`;
+    
+    let weeklyData = JSON.parse(localStorage.getItem(weekKey) || '{}');
+    const today = currentDate.toISOString().split('T')[0];
+    
+    // Calculate scores for both children
+    ['tridung', 'thaoVy'].forEach(child => {
+        if (!weeklyData[child]) {
+            weeklyData[child] = {
+                totalPoints: 0,
+                daysCompleted: 0,
+                perfectDays: 0
+            };
+        }
+        
+        const todayTasks = JSON.parse(localStorage.getItem(`${today}_${child}`) || '[]');
+        if (todayTasks.length > 0) {
+            let dailyPoints = 0;
+            let isPerfectDay = true;
+            
+            todayTasks.forEach(task => {
+                const rating = parseInt(task.rating);
+                if (rating === 0) dailyPoints += 3;
+                else if (rating === 1) dailyPoints += 1;
+                else isPerfectDay = false;
+            });
+            
+            weeklyData[child].totalPoints += dailyPoints;
+            weeklyData[child].daysCompleted += 1;
+            if (isPerfectDay) weeklyData[child].perfectDays += 1;
+        }
+    });
+    
+    localStorage.setItem(weekKey, JSON.stringify(weeklyData));
+    displayWeeklyProgress(weeklyData);
+}
+
+function displayWeeklyProgress(weeklyData) {
+    const progressDiv = document.getElementById('weeklyProgress');
+    if (!progressDiv) {
+        const container = document.createElement('div');
+        container.id = 'weeklyProgress';
+        container.className = 'weekly-progress';
+        document.body.appendChild(container);
+    }
+    
+    const currentWeek = getWeekNumber(new Date());
+    let html = `<h2>Thử thách tuần ${currentWeek}</h2>`;
+    
+    ['tridung', 'thaoVy'].forEach(child => {
+        const childData = weeklyData[child] || { totalPoints: 0, daysCompleted: 0, perfectDays: 0 };
+        const childName = child === 'tridung' ? 'Trí Dũng' : 'Thảo Vy';
+        const treeImage = `images/tree_day${childData.daysCompleted || 0}.png`;
+        
+        html += `
+            <div class="child-progress">
+                <h3>${childName}</h3>
+                <img src="${treeImage}" alt="Cây tiến độ" class="progress-tree">
+                <p>Điểm: ${childData.totalPoints}</p>
+                <p>Ngày hoàn thành: ${childData.daysCompleted}/7</p>
+                <p>Ngày hoàn hảo: ${childData.perfectDays}</p>
+            </div>
+        `;
+    });
+    
+    document.getElementById('weeklyProgress').innerHTML = html;
+}
+
+// Add styles for weekly progress
+const styleElement = document.createElement('style');
+styleElement.textContent = `
+    .weekly-progress {
+        margin: 20px;
+        padding: 15px;
+        background: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .child-progress {
+        display: inline-block;
+        margin: 10px;
+        text-align: center;
+        padding: 10px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .progress-tree {
+        width: 100px;
+        height: auto;
+        margin: 10px 0;
+    }
+`;
+document.head.appendChild(styleElement);
+
+// Update progress when tasks are completed
+function updateTask(childId, taskId, rating) {
+    // ...existing code...
+    updateWeeklyProgress(); // Add this line to update weekly progress
+}
+
+// Initialize weekly progress on page load
+document.addEventListener('DOMContentLoaded', function() {
+    // ...existing code...
+    updateWeeklyProgress();
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // ...existing code...
+    
+    // Thêm nút reset vào tree container
+    document.querySelector('.tree-container').innerHTML += `
+        <button id="reset-tree" style="display: none;">Reset Cây</button>
+    `;
+    
+    // Thêm hàm reset cây
+    function resetTree() {
+        const pin = prompt("Nhập mã PIN để xác nhận reset cây (****)");
+        if (pin !== "2022") {
+            alert("Mã PIN không đúng!");
+            return;
+        }
+        if (confirm("Bạn có chắc chắn muốn reset cây về trạng thái ban đầu?")) {
+            treeLevel = 1;
+            waterCredits = 0;
+            document.getElementById("tree-img").src = "images/tree_day1.png";
+            document.getElementById("tree-status").textContent = "Cây đã được reset về trạng thái ban đầu!";
+            document.getElementById("water-units").textContent = "0";
+            saveData();
+            alert("Đã reset cây thành công!");
+        }
+    }
+
+    // Thêm event listener cho nút reset
+    document.getElementById('reset-tree').addEventListener('click', resetTree);
+    
+    // Thêm phím tắt để hiện/ẩn nút reset (Ctrl + Shift + R)
+    document.addEventListener('keydown', function(e) {
+        if (e.ctrlKey && e.shiftKey && e.key === 'R') {
+            e.preventDefault();
+            const resetBtn = document.getElementById('reset-tree');
+            resetBtn.style.display = resetBtn.style.display === 'none' ? 'block' : 'none';
+        }
+    });
+});
+
+// Competition tracking
+let weeklyScores = {
+    vit: { daily: 0, total: 0 },
+    vy: { daily: 0, total: 0 }
+};
+
+function updateScores(player, points) {
+    weeklyScores[player].daily += points;
+    weeklyScores[player].total += points;
+    
+    // Update display
+    document.getElementById(`${player}-score`).textContent = weeklyScores[player].daily;
+    document.getElementById(`${player}-total`).textContent = weeklyScores[player].total;
+    
+    // Store in localStorage
+    localStorage.setItem('weeklyScores', JSON.stringify(weeklyScores));
+}
+
+function resetDailyScores() {
+    weeklyScores.vit.daily = 0;
+    weeklyScores.vy.daily = 0;
+    document.getElementById('vit-score').textContent = '0';
+    document.getElementById('vy-score').textContent = '0';
+    localStorage.setItem('weeklyScores', JSON.stringify(weeklyScores));
+}
+
+function resetWeeklyScores() {
+    weeklyScores = {
+        vit: { daily: 0, total: 0 },
+        vy: { daily: 0, total: 0 }
+    };
+    document.getElementById('vit-score').textContent = '0';
+    document.getElementById('vy-score').textContent = '0';
+    document.getElementById('vit-total').textContent = '0';
+    document.getElementById('vy-total').textContent = '0';
+    localStorage.setItem('weeklyScores', JSON.stringify(weeklyScores));
+}
+
+// Load saved scores
+window.addEventListener('load', () => {
+    const savedScores = localStorage.getItem('weeklyScores');
+    if (savedScores) {
+        weeklyScores = JSON.parse(savedScores);
+        document.getElementById('vit-score').textContent = weeklyScores.vit.daily;
+        document.getElementById('vy-score').textContent = weeklyScores.vy.daily;
+        document.getElementById('vit-total').textContent = weeklyScores.vit.total;
+        document.getElementById('vy-total').textContent = weeklyScores.vy.total;
+    }
+    
+    // Check if it's a new day
+    const lastDate = localStorage.getItem('lastDate');
+    const today = new Date().toDateString();
+    if (lastDate !== today) {
+        resetDailyScores();
+        localStorage.setItem('lastDate', today);
+    }
+    
+    // Check if it's a new week (Sunday)
+    if (new Date().getDay() === 0) {
+        const lastWeekReset = localStorage.getItem('lastWeekReset');
+        if (lastWeekReset !== today) {
+            resetWeeklyScores();
+            localStorage.setItem('lastWeekReset', today);
+        }
+    }
+});
+
+// Add to existing completeTask function
+function completeTask(person) {
+    // ...existing code...
+    
+    // Add points for task completion
+    updateScores(person.toLowerCase(), 1);
+}
 </script>
+<div class="evaluation-section">
+    <h3>Cuộc thi tuần này</h3>
+    
+    <div class="eval-category">
+        <h4>Ngủ đúng giờ</h4>
+        <div class="subtitle">Ai ngủ đúng giờ nhiều ngày nhất trong tuần</div>
+        <div class="score-row">
+            <span>Trí Dũng</span>
+            <span>0 điểm</span>
+        </div>
+        <div class="score-row">
+            <span>Thảo Vy</span>
+            <span>0 điểm</span>
+        </div>
+    </div>
+
+    <div class="eval-category">
+        <h4>Học tập chăm chỉ</h4>
+        <div class="subtitle">Ai hoàn thành tốt nhiệm vụ học tập nhiều nhất</div>
+        <div class="score-row">
+            <span>Trí Dũng</span>
+            <span>0 điểm</span>
+        </div>
+        <div class="score-row">
+            <span>Thảo Vy</span>
+            <span>0 điểm</span>
+        </div>
+    </div>
+</div>
 </body>
 </html>
